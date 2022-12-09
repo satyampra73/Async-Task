@@ -2,6 +2,7 @@ package com.db.asynctask;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.style.UpdateLayout;
 import android.view.View;
@@ -31,5 +32,10 @@ public class MainActivity extends AppCompatActivity {
     public void uploadTask(View view) {
         UploadTask uploadTask=new UploadTask(MainActivity.this,textView,progressIndicator,button);
         uploadTask.execute("This is that String");
+    }
+
+    public void next(View view) {
+        Intent intent=new Intent(MainActivity.this,TaskRescudleActivity.class);
+        startActivity(intent);
     }
 }
